@@ -31,7 +31,10 @@ thead.addEventListener('click', (e) => {
       case 'Salary':
         return 'salary';
 
-      case 'Name' || 'Position':
+      case 'Name':
+        return 'text';
+
+      case 'Position':
         return 'text';
 
       default:
@@ -50,7 +53,7 @@ thead.addEventListener('click', (e) => {
     }
 
     if (sortType() === 'number') {
-      return firstEl - secondEl;
+      return Number(firstEl) - Number(secondEl);
     }
 
     if (sortType() === 'text') {
